@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading;
 
 namespace Snake
@@ -11,6 +12,10 @@ namespace Snake
         static void Main(string[] args)
         {
             Console.SetBufferSize(120, 30);
+
+            Start user = new Start();
+            user.PrintRecords();
+            user.TypeName();
 
             Walls walls = new Walls(120, 30);
             walls.Draw();
